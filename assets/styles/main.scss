@@ -1,0 +1,98 @@
+// MEDIA
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// COLORS
+$white: #ffffff;
+:root {
+  --white: #ffffff;
+  --background: #001e26;
+  --background-light: #021A20;
+  --primary: #24b685;
+  --300: 300px;
+  --morph: -6.43951px 1.72546px 13.3333px rgba(0, 8, 10, 0.4115), inset 2.70459px -0.724693px 2.8px #02252E, inset -2.70459px 0.724693px 2.8px #022E39;
+  --morph-hover: 0 1.72546px 13.3333px rgba(36, 182, 133, 0.25), inset 2.70459px -0.724693px 2.8px #02252E, inset -2.70459px 0.724693px 2.8px #022E39;
+  --ff-secondary: 'Roboto', sans-serif;
+  --ff-primary: 'Raleway', sans-serif;
+}
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto:wght@400&display=swap');
+$ff-primary: 'Raleway', sans-serif;
+$ff-secondary: 'Roboto', sans-serif;
+
+/*** The new CSS Reset - version 1.4.0 (last updated 16.11.2021) ***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0 !important;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+}
+
+a {
+  cursor: pointer;
+}
+
+html {
+  font-size: 16px;
+  font-family: $ff-primary;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--background);
+  user-select: none;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+main {
+  max-width: var(--300);
+  margin: 0 auto;
+}
