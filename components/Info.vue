@@ -15,15 +15,15 @@ defineProps({
 <style lang="scss">
 .info {
   text-align: center;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem auto;
   font-size: 1.8rem;
   &__desc {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
   &__title {
     color: var(--primary);
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 </style>

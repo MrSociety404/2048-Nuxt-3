@@ -17,10 +17,11 @@
 <style lang="scss">
 .header {
   max-width: var(--300);
-  margin: 2em auto;
+  margin: 1.5em auto;
   box-shadow: var(--morph);
   border-radius: 25px;
   padding: 1.3rem 2rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

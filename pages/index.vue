@@ -1,7 +1,7 @@
 <template>
   <Header :best="best" />
   <main>
-    <Game :grid="grid" :gameOver="gameOver" />
+    <Game :grid="grid" :gameOver="gameOver"/>
     <Info :score="score" :title="title" />
     <Nav @resetBtn="reset" />
   </main>

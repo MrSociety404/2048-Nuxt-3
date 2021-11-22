@@ -4,8 +4,8 @@
       <li class="nav__item">
         <NuxtLink to="/rules" class="nav__link" aria-label="rules & info">
           <svg
-            width="38"
-            height="38"
+            width="30"
+            height="30"
             xmlns="http://www.w3.org/2000/svg"
             class="ionicon"
             viewBox="0 0 512 512"
@@ -26,8 +26,8 @@
       <li class="nav__item">
         <button class="nav__link" aria-label="restart" @click="handleReset">
           <svg
-            width="38"
-            height="38"
+            width="30"
+            height="30"
             viewBox="0 0 512 512"
             fill="none"
             stroke="currentColor"
@@ -67,15 +67,14 @@ const handleReset = () => {
   &__list {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
     max-width: var(--300);
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
   }
   &__item {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     box-shadow: var(--morph);
-    border-radius: 25px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;

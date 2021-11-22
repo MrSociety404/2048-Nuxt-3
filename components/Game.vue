@@ -68,7 +68,7 @@ defineProps({
     align-items: center;
     justify-content: center;
     border-radius: 25px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
     text-align: center;
     &-title {
       font-size: 2em;
