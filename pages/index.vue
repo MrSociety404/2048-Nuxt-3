@@ -1,7 +1,7 @@
 <template>
   <Header :best="best" />
   <main>
-    <Game :grid="grid" :gameOver="gameOver"/>
+    <Game :grid="grid" :gameOver="gameOver" />
     <Info :score="score" :title="title" />
     <Nav @resetBtn="reset" />
   </main>
@@ -22,7 +22,7 @@ const grid = ref();
 const score = ref(0);
 const title = ref("Your actual score");
 const best = ref(0);
-const gameOver = ref(false)
+const gameOver = ref(false);
 
 /**
  * Add Random Number in the grid
@@ -82,7 +82,7 @@ const reset = () => {
   grid.value = blankGrid();
   title.value = "Your actual score";
   score.value = 0;
-  gameOver.value = false
+  gameOver.value = false;
   addRandomNumber();
   addRandomNumber();
 };
@@ -144,8 +144,11 @@ onMounted((): void => {
       if (isGameOver(grid.value)) {
         title.value = "Game Over ! ";
         best.value = score.value;
-        gameOver.value = true
-        localStorage.setItem("best2048", JSON.stringify(best.value));
+        gameOver.value = true;
+        let oldBest = JSON.parse(localStorage.getItem("best2048"));
+        if (oldBest && best.value > oldBest) {
+          localStorage.setItem("best2048", JSON.stringify(best.value));
+        }
       }
     }
   });
