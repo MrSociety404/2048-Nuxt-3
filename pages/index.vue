@@ -143,10 +143,11 @@ onMounted((): void => {
 
       if (isGameOver(grid.value)) {
         title.value = "Game Over ! ";
-        best.value = score.value;
         gameOver.value = true;
-        let oldBest = JSON.parse(localStorage.getItem("best2048"));
-        if (oldBest && best.value > oldBest) {
+        let oldBest = JSON.parse(localStorage.getItem("best2048")) || 0 ;
+
+        if (best.value > oldBest) {
+          best.value = score.value;
           localStorage.setItem("best2048", JSON.stringify(best.value));
         }
       }
